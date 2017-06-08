@@ -32,7 +32,7 @@ What things you need to install the software and how to install them
 	   http://docs.aws.amazon.com/cli/latest/userguide/installing.html	  
 ```
 ```
-	   - "Git Bash" if your OS is Windows as you will use GIT Bash to run any script from it 
+       - "Git Bash" if your OS is Windows as you will use GIT Bash to run any script from it 
        https://git-scm.com/downloads
 ```
 
@@ -63,7 +63,7 @@ A step by step that tell you How to get your env running
 * **EntryPoint_ENVSetup.sh** - *This Script will prepare the entry point to setup the Environment by doing the below:*
 
 	- Delete Bastion Machine on AWS using this Script AWS-Machine-Terminate.sh
-	- Delet existing Bastion Security Groupon AWS using this script AWS-SG-Delete.sh
+	- Delet existing Bastion Security Group on AWS using this script AWS-SG-Delete.sh
 	- Add Bastion Security Group on AWS using this script AWS-SG-Add-Bastion.sh
 	- Create Bastion Machine on AWS + Docker machine +AWS Command line on it using this script AWS_Bastion_Ubuntu.sh
 	- Run ENVSetup.sh script on Bastion Machine
@@ -86,7 +86,7 @@ A step by step that tell you How to get your env running
 * **AWS-Volume.Sh** - *This Script will Create an EBS volume that can be attached to an instance in the same Availability Zone and Making an Amazon EBS Volume Available for Use.
                   you need this Volume as Backup point not to lose your data after you terminate the machine*
 
-###Notes :
+## Notes :
 
 1-You can Create SSH Key-Pair of your machine and the remote machines like Jenkis and Bastion and save them In wm-devop\ssh
 To Avoid Re-create Key-Pair each time you Re-create the machine after it's termination.
@@ -95,6 +95,7 @@ To Avoid Re-create Key-Pair each time you Re-create the machine after it's termi
 
 3- If you need to Setup Jenkins Machine Only <YOU NEED TO RUN THIS SCRIPT "AWS-Volume.Sh" Only one time> then you can run Jenkins.sh directly any time after that without any prerequists.
 
+4- You can update the Variable section and Comment or un-comment any section in the scripts to match your requirements.
   
 
 ## Contributing
