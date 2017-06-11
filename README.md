@@ -18,7 +18,7 @@ The following diagram illustrates the CI pipeline that "you need to configure by
 The pipeline will be kicked off by a commit to a GitHub repository. The commit will cause Jenkins machine to run (3) build+push to Docker Registry Machine, and upon successful completion of these jobs, pull new images from DR and deploy the app on Swarm cluster using docker-compose. The following diagram illustrates the CI pipeline.
 
 
-		![alt text](https://github.com/Mhussein27/wm-devop/blob/master/CI-Pipeline.png)
+		![Alt text](wm-devop/CI-Pipeline.png?raw=true "Pipeline")
 
 
 ### Prerequisites
@@ -28,15 +28,15 @@ What things you need to install the software and how to install them
 1- Install the below tools locally on your Machine
 
 ```
-       -[Docker-Machine](https://docs.docker.com/machine/install-machine/#installing-machine-directly)   
+       - [Docker_Machine](https://docs.docker.com/machine/install-machine/#installing-machine-directly)
 ```
 
 ```
-       -[AWS-CLI](http://docs.aws.amazon.com/cli/latest/userguide/installing.html)
+       - [AWS_CLI](http://docs.aws.amazon.com/cli/latest/userguide/installing.html)
    	  
 ```
 ```
-       -[Git-Bash](https://git-scm.com/downloads)      
+       - [Git_Bash](https://git-scm.com/downloads)    
 ```
 
 ### How to run Scripts and Setup the Environment
@@ -66,9 +66,9 @@ A step by step that tell you How to get your env running
 * **[EntryPoint_ENVSetup.sh](https://github.com/Mhussein27/wm-devop/blob/master/EntryPoint_ENVSetup.sh)** - *This Script will prepare the entry point to setup the Environment by doing the below:*
 
 	- Delete Bastion Machine on AWS using this Script [AWS-Machine-Terminate.sh](https://github.com/Mhussein27/wm-devop/blob/master/AWS-Machine-Terminate.sh)
-	- Delet existing Bastion Security Group on AWS using this script (AWS-SG-Delete.sh)[https://github.com/Mhussein27/wm-devop/blob/master/AWS-SG-Delete.sh]
-	- Add Bastion Security Group on AWS using this script (AWS-SG-Add-Bastion.sh)[https://github.com/Mhussein27/wm-devop/blob/master/AWS-SG-Add-Bastion.sh]
-	- Create Bastion Machine on AWS + Docker machine +AWS Command line on it using this script (AWS_Bastion_Ubuntu.sh)[https://github.com/Mhussein27/wm-devop/blob/master/AWS_Bastion_Ubuntu.sh]
+	- Delet existing Bastion Security Group on AWS using this script [AWS-SG-Delete.sh](https://github.com/Mhussein27/wm-devop/blob/master/AWS-SG-Delete.sh)
+	- Add Bastion Security Group on AWS using this script [AWS-SG-Add-Bastion.sh](https://github.com/Mhussein27/wm-devop/blob/master/AWS-SG-Add-Bastion.sh)
+	- Create Bastion Machine on AWS + Docker machine +AWS Command line on it using this script [AWS_Bastion_Ubuntu.sh](https://github.com/Mhussein27/wm-devop/blob/master/AWS_Bastion_Ubuntu.sh)
 	- Run [ENVSetup.sh](https://github.com/Mhussein27/wm-devop/blob/master/ENVSetup.sh) script on Bastion Machine
 	
 * **ENVSetup.sh** - *This Script will Setup the Environment and Create Swarm ,Registry,Jenkins Machines*
@@ -84,17 +84,17 @@ A step by step that tell you How to get your env running
 
 * **[AWS-Machine-Terminate.sh](https://github.com/Mhussein27/wm-devop/blob/master/AWS-Machine-Terminate.sh)** - *This Script will Terminate any machine but it takes machine name as input in Shell*
 
-* **(AWS-SG-Delete.sh)[https://github.com/Mhussein27/wm-devop/blob/master/AWS-SG-Delete.sh]** - *This Script will Delete any Security Group but it takes Security Group name as input in Shell*
+* **[AWS-SG-Delete.sh](https://github.com/Mhussein27/wm-devop/blob/master/AWS-SG-Delete.sh)** - *This Script will Delete any Security Group but it takes Security Group name as input in Shell*
 
 * **[AWS-Volume.Sh](https://github.com/Mhussein27/wm-devop/blob/master/AWS-Volume.Sh)** - *This Script will Create an EBS volume that can be attached to an instance in the same Availability Zone and Making an Amazon EBS Volume Available for Use.
                   you need this Volume as Backup point not to lose your data after you terminate the machine*
 
 ## Notes :
 
-1-You can Create SSH Key-Pair of your machine and the remote machines like Jenkis and Bastion and save them In wm-devop\ssh
+1- You can Create SSH Key-Pair of your machine and the remote machines like Jenkis and Bastion and save them In wm-devop\ssh
 To Avoid Re-create Key-Pair each time you Re-create the machine after it's termination.
 
-2-You don't need to create Bastion machine , for example : You Can create run This script [DockerRegistry.sh](https://github.com/Mhussein27/wm-devop/blob/master/DockerRegistry.sh) directly to create only Docker Registry machine.
+2- You don't need to create Bastion machine , for example : You Can create run This script [DockerRegistry.sh](https://github.com/Mhussein27/wm-devop/blob/master/DockerRegistry.sh) directly to create only Docker Registry machine.
 
 3- If you need to Setup Jenkins Machine Only <YOU NEED TO RUN THIS SCRIPT [AWS-Volume.Sh](https://github.com/Mhussein27/wm-devop/blob/master/AWS-Volume.Sh) Only one time> then you can run Jenkins.sh directly any time after that without any prerequists.
 
@@ -113,11 +113,11 @@ We can use [SemVer](http://semver.org/) for versioning.
 
 ## Authors
 
-* **Maha Hussein Sallam** - (https://github.com/Mhussein27)
+* **[Maha Hussein Sallam](https://www.linkedin.com/in/mahahusseinsallam/)**
 
 list of [contributors]who participated in this project:
 
-* **Diaa Kasem** -(https://github.com/diaakasem/) 
+* **Diaa Kasem(https://github.com/diaakasem/)** 
 
 ## License
 
